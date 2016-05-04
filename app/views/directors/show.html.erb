@@ -1,0 +1,17 @@
+<h1><%= @director.name %></h1>
+
+<table>
+<tr>
+  <th>Dob</th>
+  <th>Bio</th>
+  <th>Image</th>
+</tr>
+
+<tr>
+  <td><%= @director.dob %></td>
+  <td><%= @director.bio %></td>
+  <td><img src="<%= @director.image_url %>" width = "300"></td>
+</tr>
+</table>
+
+<a href="http://localhost:3000/delete_director/<%= @director.id %>">Delete</a>
