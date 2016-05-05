@@ -1,0 +1,33 @@
+<h1>Movies</h1>
+
+<div>
+  <a href="/new_movie_form"><input type=button value="Create New Movie"></a>
+</div>
+
+<table>
+
+    <tr>
+      <th>Image</th>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Duration</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><img src="<%= movie.image_url %>" width="80"></td>
+        <td><%= movie.title %></td>
+        <td><%= movie.year %></td>
+        <td><%= movie.duration %></td>
+        <td><%= truncate(movie.description) %></td>
+        <td><a href="http://localhost:3000/movies/<%= movie.id %>">Details</a></td>
+        <td><a href="http://localhost:3000/movies/<%= movie.id %>/edit_form">Edit</a></td>
+        <td><a href="http://localhost:3000/delete_movie/<%= movie.id %>">Delete</a></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

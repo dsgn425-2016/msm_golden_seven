@@ -1,0 +1,19 @@
+<h1><%= @director.name %></h1>
+
+<table>
+<tr>
+  <th>Dob</th>
+  <th>Bio</th>
+  <th>Image</th>
+</tr>
+
+<tr>
+  <td><%= @director.dob %></td>
+  <td><%= @director.bio %></td>
+  <td><img src="<%= @director.image_url %>" width = "300"></td>
+</tr>
+</table>
+
+
+<a href="/directors/<%= @director.id %>/edit_form"><input type=button value="Edit"></a>
+<a href="/delete_director/<%= @director.id %>"><input type=button value="Delete"></a>
