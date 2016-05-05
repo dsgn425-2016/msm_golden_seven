@@ -1,0 +1,57 @@
+  <div class="page-header">
+    <h1>Add Director</h1>
+  </div>
+
+  <!-- Create input form to add director-->
+  <form class="form-horizontal" action="/create_director">
+
+    <!-- Create input form to add dob-->
+    <div class="form-group">
+      <label for="dob" class="col-sm-2 control-label">Dob</label>
+
+      <div class="col-sm-10">
+        <input type="text" id="dob" name="dob" placeholder="Dob" class="form-control">
+
+      </div>
+
+    </div>
+    <!-- Create input form to add name-->
+    <div class="form-group">
+      <label for="name" class="col-sm-2 control-label">Name</label>
+
+      <div class="col-sm-10">
+        <input type="text" id="name" name="name" placeholder="Name" class="form-control">
+
+      </div>
+
+    </div>
+    <!-- Create input form to add bio-->
+    <div class="form-group">
+      <label for="bio" class="col-sm-2 control-label">Bio</label>
+
+      <div class="col-sm-10">
+        <textarea id="bio" name="bio" placeholder="Bio" class="form-control" rows="3"></textarea>
+
+      </div>
+
+    </div>
+    <!-- Create input form to add image_url-->
+    <div class="form-group">
+      <label for="image_url" class="col-sm-2 control-label">Image URL
+      </label>
+
+      <div class="col-sm-10">
+        <input type="text" id="image_url" name="image_url" placeholder="Image url" class="form-control">
+
+      </div>
+
+    </div>
+    <!-- Create button-->
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <input type="submit" value="Create Director" class="btn btn-primary">
+      </div>
+    </div>
+
+  </form>

@@ -11,4 +11,11 @@ class DirectorsController < ApplicationController
     render("show.html.erb")
   end
 
+  def new_form
+
+
+    render("new_form.html.erb")
+  end
+
+
 end
