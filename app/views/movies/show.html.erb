@@ -1,0 +1,21 @@
+<h1><%= @movie.title %></h1>
+
+<table>
+<tr>
+  <th>Year</th>
+  <th>Duration</th>
+  <th>Description</th>
+  <th>Image</th>
+</tr>
+
+<tr>
+  <td><%= @movie.year %></td>
+  <td><%= @movie.duration %></td>
+  <td><%= @movie.description %></td>
+  <td><img src="<%= @movie.image_url %>" width = "300"></td>
+</tr>
+</table>
+
+
+<a href="/movies/<%= @movie.id %>/edit_form"><input type=button value="Edit"></a>
+<a href="/delete_movie/<%= @movie.id %>"><input type=button value="Delete"></a>

@@ -1,4 +1,9 @@
 <h1>Directors</h1>
+
+<div>
+  <a href="/new_director_form"><input type=button value="Create New Director"></a>
+</div>
+
 <table>
 
     <tr>
@@ -18,7 +23,7 @@
         <td><%= director.name %></td>
         <td><%= truncate(director.bio) %></td>
         <td><a href="http://localhost:3000/directors/<%= director.id %>">Details</a></td>
-        <td><a href="http://localhost:3000/directors/<%= director.id %>">Edit</a></td>
+        <td><a href="http://localhost:3000/directors/<%= director.id %>/edit_form">Edit</a></td>
         <td><a href="http://localhost:3000/delete_director/<%= director.id %>">Delete</a></td>
       </tr>
     <% end %>
