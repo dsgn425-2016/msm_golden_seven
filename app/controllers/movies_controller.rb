@@ -32,7 +32,7 @@ class MoviesController < ApplicationController
   end
 
   def edit_form
-
+    @movie = Movie.find_by({ :id => params[:id]})
   end
 
   def update_row

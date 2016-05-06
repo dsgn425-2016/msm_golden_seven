@@ -1,0 +1,12 @@
+<div class="page-header">
+  <h1>Edit Movie #<%= @movie.id %></h1>
+</div>
+
+<form action="/update_movie/<%= @movie.id %>">
+  <div class="">
+    <label for="title">Title</label>
+    <div class="">
+      <input type="text" id="title" name="title" placeholder="Title" value="<%= @movie.title %>">
+    </div>
+  </div>
+</form>
