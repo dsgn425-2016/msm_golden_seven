@@ -1,12 +1,13 @@
 class CreateMovies < ActiveRecord::Migration
   def change
     create_table :movies do |t|
-      t.string :name
-      t.text :bio
-      t.string :dob
+      t.string :title
+      t.string :year
+      t.integer :duration
+      t.text :description
       t.string :image_url
 
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end
