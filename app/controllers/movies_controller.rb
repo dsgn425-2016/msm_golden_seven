@@ -6,11 +6,14 @@ class MoviesController < ApplicationController
   end
 
   def show
-
+    @movie = Movie.find_by({ :id => params[:id]})
+    render("show.html.erb")
   end
 
   def destroy
-
+    m = Movie.find_by({ :id => params[:id]})
+    @movie = m
+    m.destroy
   end
 
   def new_form
@@ -25,7 +28,7 @@ class MoviesController < ApplicationController
     m.description = params[:description]
     m.image_url = params[:image_url]
     m.save
-    render("index.html.erb")
+    redirect_to("/movies")
   end
 
   def edit_form

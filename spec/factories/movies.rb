@@ -1,8 +1,9 @@
 FactoryGirl.define do
   factory :movie do
-    name "MyString"
-    bio "MyText"
-    dob "MyString"
+    title "MyString"
+    year 1
+    duration 1
+    description "MyText"
     image_url "MyString"
   end
 end
