@@ -1,0 +1,16 @@
+<h1>Modify an Actor</h1>
+<form class="" action="/edit_actor/<%=@actor.id%>">
+  <div>
+  <input type="text" name="name" value="<%= @actor.name%>">
+</div>
+<div class="">
+  <input type="text" name="dob" value="<%= @actor.dob%>">
+</div>
+<div class="">
+  <input type="text" name="image_url" value="<%= @actor.image_url%>">
+</div>
+<div class="">
+  <input type="long text" name="bio" value="<%= @actor.bio%>">
+</div>
+<input type="submit" value="Modify Now">
+</form>
