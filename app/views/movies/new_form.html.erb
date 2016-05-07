@@ -1,0 +1,32 @@
+<a href="/movies">Movies</a>
+<a href="/directors">Directors</a>
+<a href="/actors">Actors</a>
+<br>
+
+<h1>Add Movie</h1>
+<br>
+<form action="http://localhost:3000/movies/new_form">
+  <div class="">
+<label for="movies_title">Title</label>
+<input id="movies_title" type = "text" name="the_title" placeholder="Title">
+</div>
+<div>
+    <label for="movies_year">Year</label>
+    <input id="movies_year" type = "integer" name="the_year" placeholder="Year">
+  </div>
+  <div>
+      <label for="movies_duration">Duration</label>
+      <input id="movies_duration" type = "integer" name="the_duration" placeholder="Duration">
+    </div>
+    <div>
+        <label for="movies_description">Description</label>
+        <input id="movies_description" type = "text" name="the_description" placeholder="Description">
+      </div>
+  <div>
+    <label for="image_url">Image URL</label>
+    <input id="image_url" type="text" name="the_image_url" placeholder="Image url">
+  </div>
+  <div>
+    <button>CREATE MOVIE</button>
+  </div>
+</form>

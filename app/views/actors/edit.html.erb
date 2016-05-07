@@ -1,0 +1,28 @@
+<a href="/movies">Movies</a>
+<a href="/directors">Directors</a>
+<a href="/actors">Actors</a>
+<br>
+
+<h1>Edit Actor #<%= @actor.id %></h1>
+<br>
+<form action="/actors/update/<%= @actor.id %>">
+    <div class="">
+  <label for="actors_name">Name</label>
+  <input id="actors_name" type = "text" name="the_name" placeholder="Name" value="<%= @actor.name %>">
+  </div>
+  <div>
+      <label for="actors_bio">Year</label>
+      <input id="actors_bio" type = "integer" name="the_bio" placeholder="Bio" value="<%= @actor.bio %>">
+    </div>
+    <div>
+        <label for="actors_dob">Duration</label>
+        <input id="actors_dob" type = "integer" name="the_dob" placeholder="DOB" value="<%= @actor.dob %>">
+      </div>
+    <div>
+      <label for="image_url">Image URL:</label>
+      <input id="image_url" type="text" name="the_image_url" placeholder="Image url" value="<%= @actor.image_url %>">
+    </div>
+    <div>
+      <button>EDIT ACTOR</button>
+    </div>
+  </form>
