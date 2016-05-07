@@ -1,0 +1,45 @@
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+<a href="/movies">Movies</a>
+<a href="/directors">Directors</a>
+<a href="/actors">Actors</a>
+
+
+<h1>Movies</h1>
+
+<div class="">
+<a href="/new_form">ADD A NEW MOVIE</a>
+  </div>
+
+  <div class="">
+
+  </div>
+  <table>
+  <tr>
+    <th>Image</th>
+    <th>Title</th>
+    <th>Year</th>
+    <th>Duration</th>
+    <th>Description</th>
+    <th colspan="3">Actions</th>
+  </tr>
+  <% @movies.each do |movie| %>
+  <tr>
+    <td>
+      <img src="<%= @movies.source %>" width="80">
+    </td>
+    <td>
+      <%= @movies.title %>
+    </td>
+    <td>
+      <a href="http://localhost:3000/photos/<%= photo.id %>">Show</a>
+    </td>
+    <td>
+      <a href="http://localhost:3000/photos/<%= photo.id %>/edit">Edit</a>
+    </td>
+    <td>
+      <a href="http://localhost:3000/delete_photo/<%= photo.id %>">Delete</a>
+    </td>
+  </tr>
+  <% end %>
+</table>
