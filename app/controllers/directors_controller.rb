@@ -8,4 +8,9 @@ class DirectorsController < ApplicationController
     @director = Director.find_by({:id => params[:id]})
   end
 
+  def delete_director
+    @director = Director.find_by({:id => params[:id]})
+    @director.destroy
+  end
+
 end
