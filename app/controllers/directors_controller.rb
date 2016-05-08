@@ -31,11 +31,17 @@ class DirectorsController < ApplicationController
   end
 
   def edit_form
-
+    @director = Director.find_by({ :id => params[:id]})
   end
 
   def update_row
-
+    @director = Director.find_by({ :id => params[:id]})
+    @director.dob = params[:name]
+    @director.dob = params[:dob]
+    @director.bio = params[:bio]
+    @director.image_url = params[:image_url]
+    @director.save
+    render("show.html.erb")
   end
 
 end
