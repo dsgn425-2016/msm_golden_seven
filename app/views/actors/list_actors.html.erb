@@ -1,0 +1,39 @@
+<h1>Actors</h1>
+<hr>
+
+<a href="http://localhost:3000/actors/new_form">ADD A NEW actor</a>
+
+<table>
+  <tr>
+    <th>Image</th>
+    <th colspan="3">Dob</th>
+    <th colspan="3">Name</th>
+    <th colspan="3">Bio</th>
+  </tr>
+
+<% @list_of_actors.each do |actor| %>
+  <tr>
+    <td>
+      <img src="<%= actor.image_url %>" alt="" width="80"/>
+    </td>
+    <td colspan="3">
+      <%= actor.dob %>
+    </td>
+    <td colspan="3">
+      <%= actor.name %>
+    </td>
+    <td colspan="3">
+      <%= truncate(actor.bio, :length => 30) %>
+    </td>
+    <td>
+      <a href="http://localhost:3000/actors/<%= actor.id %>">Details</a>
+    </td>
+    <td>
+      <a href="http://localhost:3000/actors/<%= actor.id %>/edit_form">Edit</a>
+    </td>
+    <td>
+      <a href="http://localhost:3000/delete_actor/<%= actor.id %>">Delete</a>
+    </td>
+  </tr>
+  <% end %>
+</table>

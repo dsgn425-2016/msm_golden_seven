@@ -1,0 +1,55 @@
+<h1>Actor #<%= @actor.id %></h1>
+<hr>
+
+<table>
+  <tr>
+    <td>
+      <h5>
+        Dob
+      </h5>
+    </td>
+    <td>
+      <p>
+        <%= @actor.dob %>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h5>
+        Name
+      </h5>
+    </td>
+    <td>
+      <p>
+        <%= @actor.name %>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h5>
+        Bio
+      </h5>
+    </td>
+    <td>
+      <p>
+        <%= @actor.bio %>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h5>
+        Image
+      </h5>
+    </td>
+    <td>
+      <img src="<%= @actor.image_url %>" width="400" />
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<a href="http://localhost:3000/actors">Go back to Actors</a>
