@@ -11,18 +11,20 @@
     <th colspan="3">Bio</th>
   </tr>
 
+<% @list_of_directors.each do |director| %>
   <tr>
     <td>
-      <img src="http://ia.media-imdb.com/images/M/MV5BMTA0Mjc0NzExNzBeQTJeQWpwZ15BbWU3MDEzMzQ3MDI@._V1._SX214_CR0,0,214,314_.jpg" alt="" width="80"/>
+      <img src="<%= director.image_url %>" alt="" width="80"/>
     </td>
-    <td>
-      May 15
+    <td colspan="3">
+      <%= director.dob %>
     </td>
-    <td>
-      Bob
+    <td colspan="3">
+      <%= director.name %>
     </td>
-    <td>
-      I am cool
+    <td colspan="3">
+      <%= truncate(director.bio, :length => 30) %>
     </td>
   </tr>
+  <% end %>
 </table>
