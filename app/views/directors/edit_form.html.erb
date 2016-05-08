@@ -1,0 +1,16 @@
+<h1>Edit Director #<%=  @d.id %></h1>
+<form action="/update_director/<%=  @d.id %>">
+  <label>Dob</label>
+  <input type = "text" name="new_dob" value="<%= @d.dob %>">
+
+  <div><label>Name</label>
+    <input type = "text" name="new_name" value="<%= @d.name %>"></div>
+
+    <div><label>Bio</label>
+      <input type = "text" name="new_bio" value="<%= @d.bio %>"></div>
+
+      <div><label>Image url</label>
+        <input type = "text" name="new_image" value="<%= @d.image_url %>"></div>
+
+        <button>Update Director</button>
+      </form>

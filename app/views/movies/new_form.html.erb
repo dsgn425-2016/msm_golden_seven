@@ -1,0 +1,22 @@
+<h1>Add Movie</h1>
+<form action="/create_movie">
+  <label>Title</label>
+  <input type = "text" name="the_title" placeholder="Title">
+
+  <div><label>Year</label>
+    <input type = "text" name="the_year" placeholder="Year"></div>
+
+    <div><label>Duration</label>
+      <input type = "text" name="the_duration" placeholder="Duration"></div>
+
+      <div><label>Description</label>
+        <texarea name="the_description" placeholder="Description" rows="3"></texarea></div>
+
+        <div><label>Image url</label>
+          <input type = "text" name="the_image" placeholder="Image url"></div>
+
+          <div><label for "director_id">Director</label>
+            <%= select_tag(:the_director_id, options_from_collection_for_select(Director.all, :id, :name), :class => "form-control") %>
+          </div>
+          <button>Create Movie</button>
+        </form>
