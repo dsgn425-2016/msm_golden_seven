@@ -28,4 +28,25 @@ class DirectorsController < ApplicationController
     redirect_to("http://localhost:3000/directors/"+director.id.to_s)
   end
 
+  def edit_director
+    @director = Director.find_by({:id => params[:id]})
+  end
+
+  def update_director_row
+    @director = Director.find_by({:id => params[:id]})
+    @director.dob = params[:dob]
+    @director.name = params[:name]
+    @director.bio = params[:bio]
+    @director.image_url = params[:image_url]
+    @director.save
+    # director = Director.new
+    # director = Director.find_by({:id => params[:id]})
+    # director.dob = params[:dob]
+    # director.name = params[:name]
+    # director.bio = params[:bio]
+    # director.image_url = params[:image_url]
+    # director.save
+
+    redirect_to("http://localhost:3000/directors/")
+  end
 end
