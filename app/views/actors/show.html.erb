@@ -1,0 +1,22 @@
+<div class="page-header">
+  <h1>Actor #<%= @actor.id %></h1>
+</div>
+
+<table border="black">
+  <tr>
+    <td>Dob</td>
+    <td><%= @actor.dob %></td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td><%= @actor.name %></td>
+  </tr>
+  <tr>
+    <td>Bio</td>
+    <td><%= @actor.bio %></td>
+  </tr>
+  <tr>
+    <td>Image</td>
+    <td><img src="<%= @actor.image_url %>" width="320"></td>
+  </tr>
+</table>

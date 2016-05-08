@@ -1,0 +1,22 @@
+<div class="page-header">
+  <h1>Director #<%= @director.id %></h1>
+</div>
+
+<table border="black">
+  <tr>
+    <td>Dob</td>
+    <td><%= @director.dob %></td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td><%= @director.name %></td>
+  </tr>
+  <tr>
+    <td>Bio</td>
+    <td><%= @director.bio %></td>
+  </tr>
+  <tr>
+    <td>Image</td>
+    <td><img src="<%= @director.image_url %>" width="320"></td>
+  </tr>
+</table>
