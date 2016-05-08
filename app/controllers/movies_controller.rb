@@ -18,7 +18,7 @@ class MoviesController < ApplicationController
     @d.duration = params[:the_duration]
     @d.description = params[:the_description]
     @d.image_url = params[:the_image_url]
-    # @d.director_id = params[:the_director_id]
+    @d.director_id = params[:the_director_id]
     @d.save
     redirect_to("/movies")
   end
@@ -40,7 +40,7 @@ class MoviesController < ApplicationController
     @d.duration = params[:new_duration]
     @d.description = params[:new_description]
     @d.image_url = params[:new_image_url]
-    # @d.director_id = params[:new_director_id]
+    @d.director_id = params[:new_director_id]
     @d.save
     redirect_to("/movies/#{params[:id]}")
   end
