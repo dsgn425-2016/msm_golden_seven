@@ -11,7 +11,8 @@ class DirectorsController < ApplicationController
   end
 
   def destroy
-
+    @director = Director.find_by({ :id => params[:id]})
+    @director.destroy
   end
 
   def new_form
