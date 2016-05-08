@@ -1,0 +1,51 @@
+<h1>Director #<%= @director.id %></h1>
+<hr>
+
+<table>
+  <tr>
+    <td>
+      <h5>
+        Dob
+      </h5>
+    </td>
+    <td>
+      <p>
+        <%= @director.dob %>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h5>
+        Name
+      </h5>
+    </td>
+    <td>
+      <p>
+        <%= @director.name %>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h5>
+        Bio
+      </h5>
+    </td>
+    <td>
+      <p>
+        <%= @director.bio %>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h5>
+        Image
+      </h5>
+    </td>
+    <td>
+      <img src="<%= @director.image_url %>" width="400" />
+    </td>
+  </tr>
+</table>

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
-  get("/directors", { :controller => "director", :action => "show_directors" })
+# routes to READ directors
+  get("/directors", { :controller => "directors", :action => "list_directors" })
+  get("/directors/:id", { :controller => "directors", :action => "show_director_details" })
 
 end
