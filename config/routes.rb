@@ -22,23 +22,23 @@ get('/update_director/:id', { :controller => 'directors', :action => 'update_dir
 #Delete Director Routes
 get('/delete_director/:id', { :controller => 'directors', :action => 'destroy' })
 
-# DIRECTOR ROUTES
+# Actor ROUTES
 
-# Create Director routes:
-get('/directors/new_form', { :controller => 'directors', :action => 'new_form' })
-get('/create_director', { :controller => 'directors', :action => 'create_row' })
+# Create Actor routes:
+get('/actors/new_form', { :controller => 'actors', :action => 'new_form' })
+get('/create_actor', { :controller => 'actors', :action => 'create_row' })
 
 
-# Read  Director routes:
-get('/directors', { :controller => 'directors', :action => 'index' })
-get('/directors/:id', { :controller => 'directors', :action => 'show' })
+# Read Actor routes:
+get('/actors', { :controller => 'actors', :action => 'index' })
+get('/actors/:id', { :controller => 'actors', :action => 'show' })
 
-#Update Director Routes
-get('/directors/:id/edit_form', { :controller => 'directors', :action => 'edit_form' })
-get('/update_director/:id', { :controller => 'directors', :action => 'update_director' })
+#Update Actor Routes
+get('/actors/:id/edit_form', { :controller => 'actors', :action => 'edit_form' })
+get('/update_actor/:id', { :controller => 'actors', :action => 'update_actor' })
 
-#Delete Director Routes
-get('/delete_director/:id', { :controller => 'directors', :action => 'destroy' })
+#Delete Actor Routes
+get('/delete_actor/:id', { :controller => 'actors', :action => 'destroy' })
 
 
 
