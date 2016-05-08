@@ -32,7 +32,6 @@ Rails.application.routes.draw do
   # DELETE
   get('/delete_director/:id', { :controller => 'directors', :action => 'destroy' })
 
-
   # UPDATE
   get('/directors/:id/edit_form', { :controller => 'directors', :action => 'edit_form' })
   get('/update_director/:id', { :controller => 'directors', :action => 'update_row' })
