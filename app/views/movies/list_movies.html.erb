@@ -1,0 +1,40 @@
+<h1>Movies</h1>
+<hr>
+
+<a href="http://localhost:3000/movies/new_form">ADD A NEW movie</a>
+
+<table>
+  <tr>
+    <th>Image</th>
+    <th colspan="3">Image</th>
+    <th colspan="3">Title</th>
+    <th colspan="3">Year</th>
+    <th colspan="3">Description</th>
+  </tr>
+
+<% @list_of_movies.each do |movie| %>
+  <tr>
+    <td>
+      <img src="<%= movie.image_url %>" alt="" width="80"/>
+    </td>
+    <td colspan="3">
+      <%= movie.title %>
+    </td>
+    <td colspan="3">
+      <%= movie.year %>
+    </td>
+    <td colspan="3">
+      <%= truncate(movie.description, :length => 50) %>
+    </td>
+    <td>
+      <a href="http://localhost:3000/movies/<%= movie.id %>">Details</a>
+    </td>
+    <td>
+      <a href="http://localhost:3000/movies/<%= movie.id %>/edit_form">Edit</a>
+    </td>
+    <td>
+      <a href="http://localhost:3000/delete_movie/<%= movie.id %>">Delete</a>
+    </td>
+  </tr>
+  <% end %>
+</table>
