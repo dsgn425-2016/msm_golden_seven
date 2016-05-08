@@ -1,0 +1,39 @@
+<h1>Directors</h1>
+<hr>
+
+<a href="http://localhost:3000/directors/new_form">ADD A NEW DIRECTOR</a>
+
+<table>
+  <tr>
+    <th>Image</th>
+    <th colspan="3">Dob</th>
+    <th colspan="3">Name</th>
+    <th colspan="3">Bio</th>
+  </tr>
+
+<% @list_of_directors.each do |director| %>
+  <tr>
+    <td>
+      <img src="<%= director.image_url %>" alt="" width="80"/>
+    </td>
+    <td colspan="3">
+      <%= director.dob %>
+    </td>
+    <td colspan="3">
+      <%= director.name %>
+    </td>
+    <td colspan="3">
+      <%= truncate(director.bio, :length => 30) %>
+    </td>
+    <td>
+      <a href="http://localhost:3000/directors/<%= director.id %>">Details</a>
+    </td>
+    <td>
+      <a href="http://localhost:3000/directors/<%= director.id %>/edit_form">Edit</a>
+    </td>
+    <td>
+      <a href="http://localhost:3000/delete_director/<%= director.id %>">Delete</a>
+    </td>
+  </tr>
+  <% end %>
+</table>
