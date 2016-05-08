@@ -42,5 +42,6 @@ Rails.application.routes.draw do
 
 
 # DELETE
+ get('/delete_actor/:id', { :controller => 'actors', :action => 'destroy'})
 
 end
