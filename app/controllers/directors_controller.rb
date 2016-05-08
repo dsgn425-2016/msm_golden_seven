@@ -2,6 +2,7 @@ class DirectorsController < ApplicationController
 
   def index
     @directors = Director.all
+    render("index.html.erb")
   end
 
   def show
@@ -13,7 +14,6 @@ class DirectorsController < ApplicationController
   end
 
   def new_form
-
   end
 
   def create_row
