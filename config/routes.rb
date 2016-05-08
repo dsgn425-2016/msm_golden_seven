@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
 
-  get("/directors", { :controller => "cinema", :action => "directors" })
+  get("/directors", { :controller => "director", :action => "show_directors" })
 
 end
