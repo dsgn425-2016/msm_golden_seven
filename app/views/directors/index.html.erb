@@ -21,7 +21,7 @@
     <tr>
       <td><img src="<%= director.image_url %>" width="80"></td>
       <td><%= director.name %></td>
-      <td><%= director.bio %></td>
+      <td><%= truncate(director.bio) %></td>
       <td><%= director.dob %></td>
       <td>
         <a href="/directors/<%= director.id %>">Details</a>
