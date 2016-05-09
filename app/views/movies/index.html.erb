@@ -1,0 +1,70 @@
+
+<a href="http://localost:3000/movies">
+  <p>
+    Movies
+  </p>
+</a>
+<a href="http://localhost:3000/directors">
+<p>
+  Directors
+</p>
+</a>
+<a href="http://localhost:3000/actors">
+<p>
+  Actors
+</p>
+</a>
+<div>
+  <h1>Movies</h1>
+</div>
+
+<p><a href="/movies/new_form">Add a New Movie</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Duration</th>
+      <th>Description</th>
+      <th>Director ID</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><img src="<%= movie.image_url %>" width="80"></td>
+        <td><%= movie.title %></td>
+        <td><%= movie.year %></td>
+        <td><%= movie.duration %></td>
+        <td><%= movie.description %></td>
+        <td>
+          <a href="/movies/<%= movie.id %>">
+            <p>
+              View
+            </p>
+          </a>
+        </td>
+        <td>
+          <a href="/movies/<%= movie.id %>/edit_form">
+            <p>
+              Edit
+            </p>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_movie/<%= movie.id %>">
+            <p>
+              Delete
+            </p>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
