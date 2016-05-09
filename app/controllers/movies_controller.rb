@@ -5,9 +5,10 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie = Movie.find_by({ :id => params[:id] })
-    render ("show.html.erb")
+    @movie = Movie.find_by({:id => params[:id]})
+    render ("/movies/show.html.erb")
   end
+
   def new_form
 
     render("new_form.html.erb")
@@ -15,13 +16,13 @@ class MoviesController < ApplicationController
 
   def create_row
   @movie = Movie.new
-  @movie.title = params[:title]
-  @movie.year = params[:year]
-  @movie.duration = params[:duration]
-  @movie.description = params[:description]
-  @movie.image_url = params[:image_url]
+  @movie.title = params[:the_title]
+  @movie.year = params[:the_year]
+  @movie.duration = params[:the_duration]
+  @movie.description = params[:the_description]
+  @movie.image_url = params[:the_image_url]
   @movie.save
-  redirect_to("/movies")
+  redirect_to("http://localhost:3000/movies")
 end
 
 def destroy

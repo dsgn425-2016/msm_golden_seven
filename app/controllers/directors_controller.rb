@@ -5,42 +5,44 @@ class DirectorsController < ApplicationController
   end
 
   def show
-    @director = Director.find_by({ :id => params[:id] })
-    render ("show.html.erb")
+    @director = Director.find_by({:id => params[:id]})
+    render ("/directors/show.html.erb")
   end
+
   def new_form
 
     render("new_form.html.erb")
   end
 
   def create_row
-    @director = Director.new
-    @director.name = params[:title]
-    @director.bio = params[:year]
-    @director.dob = params[:duration]
-    @director.image_url = params[:image_url]
-    @director.save
-    redirect_to("/directors")
-  end
+  @director = Director.new
+  @director.name = params[:the_name]
+  @director.bio = params[:the_bio]
+  @director.dob = params[:the_dob]
+  @director.image_url = params[:the_image_url]
+  @director.save
+  redirect_to("http://localhost:3000/directors")
+end
 
-  def destroy
-    @director = Director.find_by({ :id => params[:id] })
-    @director.destroy
-    redirect_to("http://localhost:3000/directors")
-  end
+def destroy
+  @director = Director.find_by({ :id => params[:id] })
+  @director.destroy
+  redirect_to("http://localhost:3000/directors")
+end
 
-  def edit
-    @director = Director.find_by({ :id => params[:id] })
+def edit
+  @director = Director.find_by({ :id => params[:id] })
 
-  end
+end
 
-  def update
-    @director = Director.find_by({ :id => params[:id] })
-    @director.name = params[:title]
-    @director.bio = params[:year]
-    @director.dob = params[:duration]
-    @director.image_url = params[:image_url]
-    @director.save
-    redirect_to("/directors")
-  end
+def update
+  @director = Director.find_by({ :id => params[:id] })
+  @director.name = params[:the_name]
+  @director.bio = params[:the_bio]
+  @director.dob = params[:the_dob]
+  @director.image_url = params[:the_image_url]
+  @director.save
+  redirect_to("/directors")
+end
+
 end

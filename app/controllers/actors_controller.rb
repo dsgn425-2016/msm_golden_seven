@@ -5,9 +5,10 @@ class ActorsController < ApplicationController
   end
 
   def show
-    @actor = Actor.find_by({ :id => params[:id] })
-    render ("show.html.erb")
+    @actor = Actor.find_by({:id => params[:id]})
+    render ("/actors/show.html.erb")
   end
+
   def new_form
 
     render("new_form.html.erb")
@@ -15,12 +16,12 @@ class ActorsController < ApplicationController
 
   def create_row
     @actor = Actor.new
-    @actor.name = params[:title]
-    @actor.bio = params[:year]
-    @actor.dob = params[:duration]
-    @actor.image_url = params[:image_url]
+    @actor.name = params[:the_name]
+    @actor.bio = params[:the_bio]
+    @actor.dob = params[:the_dob]
+    @actor.image_url = params[:the_image_url]
     @actor.save
-    redirect_to("/actors")
+    redirect_to("http://localhost:3000/actors")
   end
 
   def destroy
@@ -36,11 +37,12 @@ class ActorsController < ApplicationController
 
   def update
     @actor = Actor.find_by({ :id => params[:id] })
-    @actor.name = params[:title]
-    @actor.bio = params[:year]
-    @actor.dob = params[:duration]
-    @actor.image_url = params[:image_url]
+    @actor.name = params[:the_name]
+    @actor.bio = params[:the_bio]
+    @actor.dob = params[:the_dob]
+    @actor.image_url = params[:the_image_url]
     @actor.save
     redirect_to("/actors")
   end
+
 end

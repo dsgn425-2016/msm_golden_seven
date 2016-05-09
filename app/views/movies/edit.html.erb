@@ -7,23 +7,23 @@
 <br>
 <form action="/movies/update/<%= @movie.id %>">
     <div class="">
-  <label for="movies_title">Title</label>
+  <label for="title">Title</label>
   <input id="movies_title" type = "text" name="the_title" placeholder="Title" value="<%= @movie.title %>">
   </div>
   <div>
-      <label for="movies_year">Year</label>
-      <input id="movies_year" type = "integer" name="the_year" placeholder="Year" value="<%= @movie.year %>">
+      <label for="year">Year</label>
+      <input id="year" type = "integer" name="the_year" placeholder="Year" value="<%= @movie.year %>">
     </div>
     <div>
-        <label for="movies_duration">Duration</label>
-        <input id="movies_duration" type = "integer" name="the_duration" placeholder="Duration" value="<%= @movie.duration %>">
+        <label for="duration">Duration</label>
+        <input id="duration" type = "integer" name="the_duration" placeholder="Duration" value="<%= @movie.duration %>">
       </div>
       <div>
-          <label for="movies_description">Description</label>
+          <label for="description">Description</label>
           <input id="movies_description" type = "text" name="the_description" placeholder="Description" value="<%= @movie.description %>">
         </div>
     <div>
-      <label for="image_url">Image URL:</label>
+      <label for="image_url">Image URL</label>
       <input id="image_url" type="text" name="the_image_url" placeholder="Image url" value="<%= @movie.image_url %>">
     </div>
     <div>
