@@ -25,7 +25,6 @@ class MoviesController < ApplicationController
   def delete
     @d= Movie.find_by ({ :id => params[:id]})
     @d.destroy
-    redirect_to("/movies")
   end
 
   def edit_form

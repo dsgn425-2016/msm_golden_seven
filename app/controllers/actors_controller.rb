@@ -24,7 +24,6 @@ class ActorsController < ApplicationController
   def delete
     @d= Actor.find_by ({ :id => params[:id]})
     @d.destroy
-    redirect_to("/actors")
   end
 
   def edit_form

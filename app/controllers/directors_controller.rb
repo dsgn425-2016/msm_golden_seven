@@ -24,7 +24,6 @@ class DirectorsController < ApplicationController
   def delete
     @d= Director.find_by ({ :id => params[:id]})
     @d.destroy
-    redirect_to("/directors")
   end
 
   def edit_form

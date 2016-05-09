@@ -5,7 +5,7 @@
 <table>
   <tr>
     <th>Image</th>
-    <th>DOB</th>
+    <th>Dob</th>
     <th>Name</th>
     <th>Bio</th>
     <th></th>
@@ -22,12 +22,11 @@
       <%= actor.name %>
     </td>
     <td>
-      <%= actor.bio %>
+      <%= truncate(actor.bio) %>
     </td>
-    <td>
-      <a href="http://localhost:3000/actors/<%= actor.id %>">Show</a>
-      <a href="http://localhost:3000/actors/<%= actor.id %>/edit">Edit</a>
-      <a href="http://localhost:3000/delete_actor/<%= actor.id %>">Delete</a>
+    <td><a href="http://localhost:3000/actors/<%= actor.id %>">Show</a></td>
+      <td><a href="http://localhost:3000/actors/<%= actor.id %>/edit">Edit</a></td>
+      <td><a href="http://localhost:3000/delete_actor/<%= actor.id %>">Delete</a>
     </td>
   </tr>
   <% end %>

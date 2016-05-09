@@ -1,16 +1,16 @@
 <h1>Edit Actor #<%=  @d.id %></h1>
 <form action="/update_actor/<%=  @d.id %>">
-  <label>Dob</label>
-  <input type = "text" name="new_dob" value="<%= @d.dob %>">
+  <label for="dob">Dob</label>
+  <input type = "text" id="dob" name="new_dob" value="<%= @d.dob %>">
 
-  <div><label>Name</label>
-    <input type = "text" name="new_name" value="<%= @d.name %>"></div>
+  <div><label for="name">Name</label>
+    <input type = "text" id="name" name="new_name" value="<%= @d.name %>"></div>
 
-    <div><label>Bio</label>
-      <input type = "text" name="new_bio" value="<%= @d.bio %>"></div>
+    <div><label for="bio">Bio</label>
+      <input type = "text" id="bio" name="new_bio" value="<%= @d.bio %>"></div>
 
-      <div><label>Image url</label>
-        <input type = "text" name="new_image" value="<%= @d.image_url %>"></div>
+      <div><label for="image_url">Image url</label>
+        <input type = "text" id="image_url" name="new_image" value="<%= @d.image_url %>"></div>
 
         <button>Update Actor</button>
       </form>

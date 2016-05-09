@@ -1,19 +1,19 @@
 <h1>Add Movie</h1>
 <form action="/create_movie">
-  <label>Title</label>
-  <input type = "text" name="the_title" placeholder="Title">
+  <label for="title">Title</label>
+  <input type = "text" name="the_title" id="title" placeholder="Title">
 
-  <div><label>Year</label>
-    <input type = "text" name="the_year" placeholder="Year"></div>
+  <div><label for="year">Year</label>
+    <input type = "text" name="the_year" id="year" placeholder="Year"></div>
 
-    <div><label>Duration</label>
-      <input type = "text" name="the_duration" placeholder="Duration"></div>
+    <div><label for="duration">Duration</label>
+      <input type = "text" name="the_duration" id="duration" placeholder="Duration"></div>
 
-      <div><label>Description</label>
-        <texarea name="the_description" placeholder="Description" rows="3"></texarea></div>
+      <div><label for="description">Description</label>
+        <textarea name="the_description" id="description" placeholder="Description" rows="3"></textarea></div>
 
-        <div><label>Image url</label>
-          <input type = "text" name="the_image" placeholder="Image url"></div>
+        <div><label for="image_url">Image url</label>
+          <input type="text" name="the_image_url" id="image_url" placeholder="Image url"></div>
 
           <button>Create Movie</button>
         </form>
