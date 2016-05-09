@@ -1,0 +1,61 @@
+<div>
+  <h1>Add Movie</h1>
+</div>
+
+<form action="http://localhost:3000/create_movie">
+  <!-- Label and input for title -->
+  <div>
+    <label for="title">
+      Title
+    </label>
+    <div>
+      <input type="text" id="title" name="title" placeholder="Title">
+    </div>
+  </div>
+
+  <!-- Label and input for year -->
+  <div>
+    <label for="year">
+      Year
+    </label>
+    <div>
+      <input type="text" id="year" name="year" placeholder="Year">
+    </div>
+  </div>
+
+  <!-- Label and input for duration -->
+  <div class="form-group">
+    <label for="duration">
+      Duration
+    </label>
+    <div class="col-sm-10">
+      <input type="text" id="duration" name="duration" placeholder="Duration">
+    </div>
+  </div>
+
+  <!-- Label and input for description -->
+  <div class="form-group">
+    <label for="description">
+      Description
+    </label>
+    <div class="col-sm-10">
+      <textarea id="description" name="description" placeholder="Description" rows="3"></textarea>
+    </div>
+  </div>
+
+  <!-- Label and input for image_url -->
+  <div>
+    <label for="image_url">
+      Image url
+    </label>
+    <div>
+      <input type="text" id="image_url" name="image_url" placeholder="Image url">
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <input type="submit" value="Create Movie">
+    </div>
+  </div>
+</form>
