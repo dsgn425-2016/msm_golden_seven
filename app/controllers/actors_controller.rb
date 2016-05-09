@@ -42,6 +42,5 @@ class ActorsController < ApplicationController
     @actor = Actor.find(params[:id])
 
     @actor.destroy
-      render("index")
   end
 end

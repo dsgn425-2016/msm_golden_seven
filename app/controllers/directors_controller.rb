@@ -43,6 +43,5 @@ class DirectorsController < ApplicationController
     @director = Director.find(params[:id])
 
     @director.destroy
-    render("index")
   end
 end
