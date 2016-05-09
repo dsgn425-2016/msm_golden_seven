@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row Header">
+    <div class="col-xs-12">
+      Edit Movie # <%= @movie.id %>
+    </div>
+  </div>
+  <form action="/update_movies/<%=@movie.id%>">
+    <div class="row Details">
+      <div class="col-md-2">
+        <label for="title">Title</label>
+      </div>
+      <div class="col-md-10">
+        <input type="text" id ="title" name="title" value="<%= @movie.title %>">
+      </div>
+      <div class="col-md-2">
+        <label for="year">Name</label>
+      </div>
+      <div class="col-md-10">
+        <input type="text" id = "year" name="year" value=" <%= @movie.year %>">
+      </div>
+      <div class="col-md-2">
+        <label for="duration">Bio</label>
+      </div>
+      <div class="col-md-10">
+        <input type="text" id="duration" name="duration" value="<%= @movie.duration %>">
+      </div>
+      <div class="col-md-2">
+        <label for="description">Bio</label>
+      </div>
+      <div class="col-md-10">
+        <input type="text" id="description" name="description" value="<%= @movie.description %>">
+      </div>
+      <div class="col-md-2">
+        <label for="image_url">Image URL</label>
+      </div>
+      <div class="col-md-10">
+        <input type="text" id = "image_url" name="image_url" value="<%= @movie.image_url %>">
+      </div>
+      <div class="col-md-offset-2 col-md-10">
+        <button>Update Movie</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,18 @@
+<h1>Movie #<%= @movie_id %></h1>
+<hr>
+<dl>
+  <dt>Title</dt>
+  <dd><%= @movie_title %></dd>
+
+  <dt>year</dt>
+  <dd><%= @movie_year%> </dd>
+
+  <dt>Duration</dt>
+  <dd> <%= @movie_duration %> </dd>
+
+  <dt>Description</dt>
+  <dd> <%= @movie_description %> </dd>
+
+  <dt>Image</dt>
+  <dd><img src="<%= @movie_img %>" width="200"/></dd>
+</dl>

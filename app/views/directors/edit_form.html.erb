@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row Header">
+    <div class="col-xs-12">
+      Edit Director # <%= @director.id %>
+    </div>
+  </div>
+  <form action="/update_directors/<%=@director.id%>">
+    <div class="row Details">
+      <div class="col-md-2">
+        <label for="dob">DoB</label>
+      </div>
+      <div class="col-md-10">
+        <input type="text" id ="dob" name="dob" value="<%= @director.dob %>">
+      </div>
+      <div class="col-md-2">
+        <label for="name">Name</label>
+      </div>
+      <div class="col-md-10">
+        <input type="text" id = "name" name="name" value=" <%= @director.name %>">
+      </div>
+      <div class="col-md-2">
+        <label for="bio">Bio</label>
+      </div>
+      <div class="col-md-10">
+        <input type="text" id="bio" name="bio" value="<%= @director.bio %>">
+      </div>
+      <div class="col-md-2">
+        <label for="image_url">Image URL</label>
+      </div>
+      <div class="col-md-10">
+        <input type="text" id = "image_url" name="image_url" value="<%= @director.image_url %>">
+      </div>
+      <div class="col-md-offset-2 col-md-10">
+        <button>Update Director</button>
+      </div>
+    </div>
+  </form>
+</div>
