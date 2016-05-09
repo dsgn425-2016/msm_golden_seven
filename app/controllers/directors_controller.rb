@@ -18,8 +18,8 @@ class DirectorsController < ApplicationController
     @director.image_url = params[:image_url]
 
     @director.save
-
-    render("show")
+    a = params[:id].to_s
+    redirect_to("http://localhost:3000/directors/" + a)
   end
 
   def edit_form
@@ -36,7 +36,8 @@ class DirectorsController < ApplicationController
 
     @director.save
 
-    render("show")
+    a = params[:id].to_s
+    redirect_to("http://localhost:3000/directors/" + a)
   end
 
   def destroy

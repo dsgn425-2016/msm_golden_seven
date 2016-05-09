@@ -19,7 +19,8 @@ class ActorsController < ApplicationController
 
     @actor.save
 
-    render("show")
+    a = params[:id].to_s
+    redirect_to("http://localhost:3000/actors/" + a)
   end
 
   def edit_form
@@ -35,7 +36,8 @@ class ActorsController < ApplicationController
 
     @actor.save
 
-    redirect_to("http://localhost:3000/movies/" + params[:id])
+    a = params[:id].to_s
+    redirect_to("http://localhost:3000/actors/" + a)
   end
 
   def destroy
