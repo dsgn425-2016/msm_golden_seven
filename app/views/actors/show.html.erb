@@ -1,0 +1,32 @@
+<a href="/movies">Movies</a>
+<a href="/directors">Directors</a>
+<a href="/actors">Actors</a>
+<br>
+
+<h1>Actor #<%= @actor.id %></h1>
+
+<div class="">
+  <table>
+<tr>
+  <th>name</th>
+  <th><%= @actor.name %> </th>
+</tr>
+<tr>
+  <th>Bio</th>
+  <th><%= @actor.bio %></th>
+</tr>
+<tr>
+  <th>DOB</th>
+  <th><%= @actor.dob %></th>
+</tr>
+<tr>
+  <th>Image</th>
+  <th><img src="<%= @actor.image_url %>" width="300"/></th>
+</tr>
+</table>
+</div>
+<a href="/actors"><input type=button value="Go Back"></a>
+
+<a href="/actors/edit/<%= @actor.id %>"><input type=button value="Edit"></a>
+
+<a href="/actors/delete_actor/<%= @actor.id %>"><input type=button value="Delete"></a>
