@@ -1,0 +1,35 @@
+<a href="/movies">Movies</a>
+<a href="/directors">Directors</a>
+<a href="/actors">Actors</a>
+
+
+<h1>Directors</h1>
+
+<div class="">
+  <a href="/directors/new_form">ADD A NEW DIRECTOR</a>
+</div>
+
+<div class="">
+  <table>
+    <tr>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Bio</th>
+      <th>DOB</th>
+      <th></th>
+
+    </tr>
+    <% @list_of_directors.each do |director| %>
+    <tr>
+      <td><img src="<%= director.image_url %>" width="80"></td>
+      <td><%= director.name %></td>
+      <td><%= director.bio %></td>
+      <td><%= director.dob %></td>
+      <td><%= director.image_url %></td>
+      <td><a href="/directors/<%= director.id %>">Show</a></td>
+      <td><a href="/directors/edit/<%= director.id %>">Edit</a></td>
+      <td><a href="/directors/delete_director/<%= director.id %>">Delete</a></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
