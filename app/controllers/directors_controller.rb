@@ -1,4 +1,4 @@
-class DirectorsController < ApplicationController
+  class DirectorsController < ApplicationController
   def new_form
 
     end
