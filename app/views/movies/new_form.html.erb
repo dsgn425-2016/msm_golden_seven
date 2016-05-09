@@ -15,8 +15,5 @@
         <div><label>Image url</label>
           <input type = "text" name="the_image" placeholder="Image url"></div>
 
-          <div><label for "director_id">Director</label>
-            <%= select_tag(:the_director_id, options_from_collection_for_select(Director.all, :id, :name) %>
-          </div>
           <button>Create Movie</button>
         </form>
