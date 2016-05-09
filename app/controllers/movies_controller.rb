@@ -44,5 +44,6 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
 
     @movie.destroy
+    render("index")
   end
 end

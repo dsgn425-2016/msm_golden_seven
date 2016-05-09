@@ -3,6 +3,6 @@ FactoryGirl.define do
     name "MyString"
     bio "MyText"
     dob "MyString"
-    image_url ""
+    image_url "MyString"
   end
 end

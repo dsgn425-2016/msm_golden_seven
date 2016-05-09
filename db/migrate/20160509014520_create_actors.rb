@@ -4,7 +4,7 @@ class CreateActors < ActiveRecord::Migration
       t.string :name
       t.text :bio
       t.string :dob
-      t.sting :image_url
+      t.string :image_url
 
       t.timestamps null: false
     end
