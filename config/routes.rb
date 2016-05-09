@@ -22,7 +22,7 @@ get("/delete_actor/:id",  {:controller => "actors", :action => "delete_row"})
 
 #_____________________________________
 #DIRECTORS resources
-# INDEX of actors
+# INDEX of directors
 get("/directors",    {:controller => "directors", :action => "index"})
 
 # CREATE
@@ -34,12 +34,36 @@ get("/directors/create_row", {:controller => "directors", :action =>"create_row"
 get("/directors/:id/edit_form", {:controller => "directors", :action => "edit_form"})
 get("/update_directors/:id",    {:controller => "directors", :action => "update_row"})
 
-#READ the individual page for an actor
+#READ the individual page for an director
 
 get("/directors/:id",{:controller => "directors", :action => "show"})
 
-# DELETE an actor
+# DELETE an director
 
 get("/delete_director/:id",  {:controller => "directors", :action => "delete_row"})
+
+
+#_____________________________________
+#MOVIES resources
+# INDEX of directors
+get("/movies",    {:controller => "movies", :action => "index"})
+
+# CREATE
+get("/movies/new_form",   {:controller => "movies", :action => "new_form"})
+get("/movies/create_row", {:controller => "movies", :action =>"create_row"})
+
+# UPDATE
+
+get("/movies/:id/edit_form", {:controller => "movies", :action => "edit_form"})
+get("/update_movies/:id",    {:controller => "movies", :action => "update_row"})
+
+#READ the individual page for an movie
+
+get("/movies/:id",{:controller => "movies", :action => "show"})
+
+# DELETE an movie
+
+get("/delete_movie/:id",  {:controller => "movies", :action => "delete_row"})
+
 
 end
