@@ -1,0 +1,25 @@
+<h1>Actor #<%= @d.id %></h1>
+<hr>
+<p>
+  <table>
+    <tr>
+  <td>Dob</td>
+  <td><%= @d.dob %></td>
+    </tr>
+
+    <tr>
+  <td>Name</td>
+  <td><%= @d.name %></td>
+    </tr>
+
+    <tr>
+  <td>Bio</td>
+  <td><%= @d.bio %></td>
+    </tr>
+
+    <tr>
+  <td>Image</td>
+  <td><img src="<%= @d.image_url%>"></td>
+    </tr>
+  </table>
+</p>
